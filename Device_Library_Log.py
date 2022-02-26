@@ -29,7 +29,7 @@ def addDevice():
                 for i in range(deviceTotal):
                     global totalDevices
                     global allDevices
-                    deviceTypeKey = input("Enter the OS of device:")
+                    deviceTypeKey = input("Enter the type of device:")
                     deviceNameValue = input("Enter the device name:")
                     notesKey = "Notes:"
                     notesValue = input("Enter any notes:")
