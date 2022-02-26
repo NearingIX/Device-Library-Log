@@ -46,7 +46,6 @@ def addDevice():
             continue
 
 addDevice()
-print("Thank you for using the Device Library Log.")
 deviceLibraryFile.close()
 print("Thank you for using the Device Library Log.\nPlease press enter to quit.")
 exitProgram = input()
