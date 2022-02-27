@@ -14,13 +14,12 @@ def digestFile():
     print("~ Current Devices ~")
     print(readFile)
 
-digestFile()
-
 def addDevice():
     print("Welcome! How many devices would you like to add?")
 
     while True:
         try:
+            global i
             numberOfDevices = input()
             deviceTotal = int(numberOfDevices)
             if deviceTotal <= 0:
@@ -37,7 +36,8 @@ def addDevice():
                     notesValue = input("Enter any notes:")
                     dateTimeStampKey = "Recorded on"
                     dateTimeStampValue = str(datetime.datetime.now())
-                    device = {deviceNameKey:deviceNameValue, deviceTypeKey:deviceTypeValue, notesKey:notesValue, dateTimeStampKey:dateTimeStampValue}
+                    device = {deviceNameKey:deviceNameValue, deviceTypeKey:deviceTypeValue, 
+                    notesKey:notesValue, dateTimeStampKey:dateTimeStampValue}
                     allDevices.update(device)
                     # Writes each device to a new line
                     deviceLibraryFile.write(str(device) + "\n")
@@ -47,6 +47,7 @@ def addDevice():
             print("Please enter an integer:")
             continue
 
+digestFile()
 addDevice()
 deviceLibraryFile.close()
 print("Thank you for using the Device Library Log.\nPlease press enter to quit.")
