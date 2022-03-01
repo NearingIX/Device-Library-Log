@@ -1,5 +1,4 @@
 # Device Library Log
-
 import datetime
 
 totalDevices = 0
